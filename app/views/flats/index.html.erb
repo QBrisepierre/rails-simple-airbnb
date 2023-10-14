@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <h1>All our Flats</h1>
+  <p>All <%= @flats.count %> flats</p>
+
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col mb-4">
+        <div class="card" style="width: 18rem;">
+          <img src="https://assets-global.website-files.com/61435370a1e1fc4598ab88ab/6181123afeada50f821c6702_hotel-mont-blanc-megeve-centre-7.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text"><%= flat.address %></p>
+            <div class="d-flex">
+              <p class="card-text me-2"><%= flat.price_per_night %><strong>€</strong></p>
+              <p class="card-text"><%= flat.number_of_guests %><i class="fa-solid fa-people-group"></i></p>
+            </div>
+          </div>
+          <div class="card-body border-top">
+            <%= link_to "More info", flat_path(flat) %>
+            <%= link_to "Edit", edit_flat_path(flat) %>
+            <%= link_to "Remove", flat_path(flat) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

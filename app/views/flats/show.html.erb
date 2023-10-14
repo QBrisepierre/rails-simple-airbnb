@@ -1,0 +1,57 @@
+<img class="w-100" style="height: 350px; object-fit: cover" src="https://assets-global.website-files.com/61435370a1e1fc4598ab88ab/6181123afeada50f821c6702_hotel-mont-blanc-megeve-centre-7.jpg" alt="">
+<div class="container margin-top-negative">
+  <div class="row justify-content-between">
+
+    <div class="col-8">
+      <div class="p-3 bg-light shadow rounded">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="mt-4 p-3 bg-light shadow rounded">
+        <h2>A bit more about this flat...</h2>
+        <p><%= @flat.description %></p>
+        <div style="height: 350px; background-position: center; background-size: cover; background-image: url('https://www.google.com/maps/d/thumbnail?mid=1YREHjFa9vNECQU-yRF39UvFhvEc&hl=fr')">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+
+      <div class="p-3 bg-light shadow rounded">
+        <h3>Book this place!</h3>
+        <form action="">
+          <div class="input-group mb-2">
+            <span class="input-group-text" id="start-date">From:</span>
+            <input type="text" class="form-control" placeholder="08/12/23" aria-label="Date" aria-describedby="start-date">
+          </div>
+          <div class="input-group mb-2">
+            <span class="input-group-text" id="end-date">To:</span>
+            <input type="text" class="form-control" placeholder="12/12/23" aria-label="Date" aria-describedby="end-date">
+          </div>
+          <button type="submit" class="btn btn-success w-100">Book</button>
+        </form>
+      </div>
+
+      <div class="mt-4 p-3 bg-light shadow rounded">
+        <h2>Details</h2>
+        <div class="d-flex">
+          <p class="me-2"><%= @flat.number_of_guests %> peoples</i></p>
+          <p><%= @flat.price_per_night %><strong>€</strong></p>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between mt-4 p-3 bg-light shadow rounded">
+        <p class="mb-0"><strong>Share</strong></p>
+        <div>
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-square-twitter"></i>
+          <i class="fa-brands fa-square-pinterest"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
