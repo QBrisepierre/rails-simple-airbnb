@@ -18,7 +18,7 @@
           <div class="card-body border-top">
             <%= link_to "More info", flat_path(flat) %>
             <%= link_to "Edit", edit_flat_path(flat) %>
-            <%= link_to "Remove", flat_path(flat) %>
+            <%= link_to "Remove", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
           </div>
         </div>
       </div>

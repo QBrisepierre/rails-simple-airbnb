@@ -1,0 +1,16 @@
+<div class="container  mt-3">
+  <div class="row justify-content-center">
+    <div class="col-6 p-4 bg-light">
+      <h1 class="text-capitalize"><%= @action %> flat</h1>
+      <%= simple_form_for @flat do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :description %>
+        <%= f.input :price_per_night %>
+        <%= f.input :number_of_guests %>
+        <%= f.submit "Send", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
